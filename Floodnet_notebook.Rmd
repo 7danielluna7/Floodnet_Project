@@ -1,0 +1,13 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+
+
+floodnet_df <- read.csv("FloodNet_data.csv")
+head(floodnet_df)
+
+```
