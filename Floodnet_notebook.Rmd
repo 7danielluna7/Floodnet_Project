@@ -3,18 +3,29 @@ title: "R Notebook"
 output: html_notebook
 ---
 
+# importing necessary libraries
+library(readr)
 
-```{r}
 
-floodnet_df <- read.csv("FloodNet_data.csv")
+#---
+#title: "R Notebook"
+#output: html_notebook
+#---
+
+#load dataset
+floodnet_df <- read_csv("FloodNet__Street_Flooding_Events_Measured_by_FloodNet_Sensors_20261016.csv")
+
+#view the few rows of data / summary of data
 head(floodnet_df)
 str(floodnet_df)
 summary(floodnet_df)
-```
-```{r}
 
-hist(floodnet_df$Maximum.Flood.Depth..inches.)
-
-
-```
+#plot
+hist(floodnet_df$"Maximum Flood Depth (inches)",
+        main = "Maximum Flood Height Detected \n (All Rain Events & Sensor Readings) \n Nov. 2020 - Oct. 2026",
+        xlab = "Flood Depth (in.)",
+        ylab = "Occurence",
+        col = "blue",
+        border = "skyblue"
+     )
 
