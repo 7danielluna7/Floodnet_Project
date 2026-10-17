@@ -6,8 +6,15 @@ output: html_notebook
 
 ```{r}
 
-
 floodnet_df <- read.csv("FloodNet_data.csv")
 head(floodnet_df)
+str(floodnet_df)
+summary(floodnet_df)
+```
+```{r}
+
+hist(floodnet_df$Maximum.Flood.Depth..inches.)
+
 
 ```
+
